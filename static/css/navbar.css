@@ -17,11 +17,13 @@
 }
 ul {
     list-style-type: none;
+	width:1070px;
+	max-width:1070px;
     margin: 0;
     padding-left: 70px;
     overflow: hidden;
-	background-color: rgb(194,160,96);
-/*    background-color: rgb(244, 242, 179);*/
+	background-color: rgb(203, 175, 124);
+    /* background-color: rgb(244, 242, 179); */
 }
 
 li {
@@ -70,8 +72,8 @@ li.dropdown {
     display: block;
 }
 
-/*
+
 .active {
-    background-color: rgb(248, 220, 109);)
+	background-color: rgb(248, 220, 109);
 }
-*/
+

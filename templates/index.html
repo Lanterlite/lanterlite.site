@@ -6,7 +6,6 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<!-- LOGO AND NAVBAR -->
 	<body background="{{ url_for('static', filename='images/bgimage.jpg') }}">
 	<div id="label">
 		<img src="{{ url_for('static', filename='images/blog-header.png') }}" style="height:70px; width:200px;"/>
@@ -56,7 +55,6 @@
 			</li>
 		</ul>
 	</div>
-	<!-- END: LOGO AND NAVBAR -->
 
 	<div id="home-post">
 		<table cellpadding="18px">
@@ -123,7 +121,6 @@
 		</table>
 	</div>
 
-		<!-- FOOTER -->
 		<div id="home-post-footer">
 			<table cellpadding="0px">
 			<thead>
@@ -138,10 +135,8 @@
 			</tbody>
 			</table>
 		</div>
-		<!-- END: FOOTER -->
-	
-	<!-- SLIDE SHOW SCRIPT -->
-	<script>
+
+		<script>
 		var slideIndex = 0;
 		showSlides();
 
@@ -159,10 +154,30 @@
 			}
 			slides[slideIndex-1].style.display = "block";  
 			dots[slideIndex-1].className += " active";
-			setTimeout(showSlides, 3000); // Change image every 2 seconds
+			setTimeout(showSlides, 3000); 
 		}
 	</script>
-	<!-- END: SLIDE SHOW SCRIPT -->
+<script type="text/javascript">
+function hscrollbar() {
+    /* First, we need the horizontal scroll position of the viewer's display,
+       but there are different ways to call it in JS depending on browser.
+       I'm using the if/else shorthand notation to detect if a call is legit: 
+       somevar = (statement) ? statement_true_value : statement_false_value */
+    var left = 
+        /* window.pageXOffset should work for most recent browsers: */
+        window.pageXOffset ? window.pageXOffset : 
+        /* If it DOESN'T, let's try this: */
+        document.documentElement.scrollLeft ? document.documentElement.scrollLeft : 
+        /* And if THAT didn't work: */
+        document.body.scrollLeft;
+
+    /* Now that we have the horizontal scroll position, set #footpanel's left 
+       position to NEGATIVE the value, so it APPEARS to follow the scroll: */
+    document.getElementById('footpanel').style.left = -left;
+}
+window.onscroll = hscrollbar; /* Call the function when the user scrolls */
+window.onresize = hscrollbar; /* Call the function when the window resizes */
+</script>
 
 	</body>
 </html> 
