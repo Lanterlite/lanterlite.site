@@ -76,3 +76,22 @@
 	text-align: justify;
 }
 
+#home-post-footest
+{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	padding-left: 37px;
+	padding-right: 110px;
+	width: 1000px;
+	border-color: #FFFFFF;
+	background-color: rgb(255,252,201);
+	/* background-color: rgb(203, 175, 124); */
+	border-radius: 5px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	text-align: center;
+}
+
+	
+}
