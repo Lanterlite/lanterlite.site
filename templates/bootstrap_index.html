@@ -1,0 +1,82 @@
+{% extends "bootstrap/base.html" %}
+{% block title %}This is an example page{% endblock %}
+
+{% block styles %}
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/navbar.css') }}">
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/slideshow.css') }}">
+	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='css/style.css') }}">
+{% endblock %}
+
+{% block content %}
+	<div id="label">
+		<img src="{{ url_for('static', filename='images/blog-header.png') }}" style="height:70px; width:200px;"/>
+	</div>
+	<div id="nav-bar">
+		<ul>
+			<li><a href="#home" style="background-color: rgb(248, 220, 109);">Halaman Utama</a></li>
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">Download</a>
+			<div class="dropdown-content">
+				<a href="#link1">Audio Kajian</a>
+				<a href="#link1">Software Lisensi Gratis</a>
+			</div>
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">Tanya Jawab Islam</a>
+			<div class="dropdown-content">
+				<a href="#link1">Dr. Khalid Basalamah, MA.</a>
+			</div>
+			</li>
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">Materi Islam</a>
+			<div class="dropdown-content">
+				<a href="#link1">Rumah Tangga</a>
+			</div>
+			</li>
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">Kisah Tokoh Muslim</a>
+			<div class="dropdown-content">
+				<a href="#link1">Kisah Sahabat Nabi</a>
+				<a href="#link1">Kisah Nabi dan Rasul</a>
+			</div>
+			</li>
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">Ensiklopedi Teknologi</a>
+			<div class="dropdown-content">
+				<a href="#link1">Teknologi</a>
+				<a href="#link1">Istilah dalam Teknologi</a>
+			</div>
+			</li>
+			<li class="dropdown">
+				<a href="javascript:void(0)" class="dropbtn">Karya Lanterlite</a>
+			<div class="dropdown-content">
+				<a href="#link1">Aplikasi Android</a>
+				<a href="#link1">Aplikasi Desktop</a>
+				<a href="#link1">Aplikasi Web</a>
+			</div>
+			</li>
+		</ul>
+	</div>{% endblock %}
+
+{% block scripts %}
+	<script>
+		var slideIndex = 0;
+		showSlides();
+
+		function showSlides() {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("dot");
+			for (i = 0; i < slides.length; i++) {
+			   slides[i].style.display = "none";  
+			}
+			slideIndex++;
+			if (slideIndex> slides.length) {slideIndex = 1}    
+			for (i = 0; i < dots.length; i++) {
+				dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex-1].style.display = "block";  
+			dots[slideIndex-1].className += " active";
+			setTimeout(showSlides, 3000); // Change image every 2 seconds
+		}
+	</script>
+{% endblock %}
