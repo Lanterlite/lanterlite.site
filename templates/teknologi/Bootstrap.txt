@@ -1,0 +1,5 @@
+
+
+Kelebihan bootstrap:
+- Aplikasi web yang didesain dengan menggunakan bootstrap akan langsung menyesuaikan dengan lebar dari media perambahnya. Sehingga tampilan web akan tetap rapi ketika dibuka dengan media apapun baik itu handphone, tablet, laptop maupun PC desktop.
+
