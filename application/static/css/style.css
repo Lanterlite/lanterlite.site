@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Impact2'; /*a name to be used later*/
+    src: url('fonts/impact.ttf') /*URL to font*/
+}
+
 #post
 {
 	padding-top: 20px;
