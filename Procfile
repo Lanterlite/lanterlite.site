@@ -1,1 +1,1 @@
-web: gunicorn LanterliteApp:app
+web: gunicorn main:app
