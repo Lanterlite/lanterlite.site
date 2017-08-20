@@ -1,6 +1,16 @@
 @font-face {
-    font-family: 'Impact2'; /*a name to be used later*/
+    font-family: 'lanterlite_impact'; /*a name to be used later*/
     src: url('fonts/impact.ttf') /*URL to font*/
+}
+
+@font-face {
+    font-family: 'lanterlite_cambria'; /*a name to be used later*/
+    src: url('fonts/cambria.ttc') /*URL to font*/
+}
+
+@font-face {
+    font-family: 'lanterlite_constantia'; /*a name to be used later*/
+    src: url('fonts/constan.ttf') /*URL to font*/
 }
 
 #post
