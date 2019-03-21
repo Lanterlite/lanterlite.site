@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, redirect
 # from flask_bootstrap import Bootstrap
 from flask import request
 from application.settings import DEBUG
@@ -10,7 +10,8 @@ app.static_folder = 'static'
 	
 @app.route('/')
 def index():
-    return render_template('index.html')
+    # return render_template('index.html')
+    return redirect("https://www.lanterlite.com", code=301)
     # return render_template('bootstrap_index.html')
 	
 # if __name__ == '__main__':
